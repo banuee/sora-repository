@@ -25,3 +25,7 @@ description = "File manager for Cinnamon desktop"
 [packages.hyprland]
 version = "0.57.1"
 description = "Dynamic tiling Wayland compositor"
+
+[packages.networkmanager]
+version = "1.58.1"
+description = "Network connection manager and user applications (nmcli, nmtui)"
