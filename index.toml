@@ -9,3 +9,19 @@ description = "Resource monitor for processor, memory, disks and network"
 [packages.telegram]
 version = "7.4.0"
 description = "Telegram Desktop messaging application"
+
+[packages.kitty]
+version = "0.50.0"
+description = "Modern, hackable, GPU-based terminal emulator"
+
+[packages.chromium]
+version = "156.0.8078.79"
+description = "Fast, secure, and privacy-focused web browser"
+
+[packages.nemo]
+version = "6.6.4"
+description = "File manager for Cinnamon desktop"
+
+[packages.hyprland]
+version = "0.57.1"
+description = "Dynamic tiling Wayland compositor"

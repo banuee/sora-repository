@@ -1,0 +1,22 @@
+[package]
+name = "kitty"
+version = "0.50.0"
+description = "Modern, hackable, GPU-based terminal emulator"
+homepage = "https://sw.kovidgoyal.net/kitty/"
+type = "binary"
+
+[source]
+url = "https://github.com/kovidgoyal/kitty/releases/download/v0.50.0/kitty-0.50.0-x86_64.txz"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = true
+bind_config = "kitty"
+
+[install]
+binaries = [
+    { source = "bin/kitty", target = "kitty" },
+    { source = "bin/kitten", target = "kitten" }
+]
+desktop_entry = { name = "kitty", exec = "kitty", icon = "kitty", categories = "System;TerminalEmulator;", comment = "Fast, feature-rich, GPU based terminal" }

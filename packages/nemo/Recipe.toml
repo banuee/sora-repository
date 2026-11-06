@@ -1,0 +1,26 @@
+[package]
+name = "nemo"
+version = "6.6.4"
+description = "File manager for Cinnamon desktop"
+homepage = "https://github.com/linuxmint/nemo"
+type = "binary"
+
+[source]
+url = "https://geo.mirror.pkgbuild.com/extra/os/x86_64/nemo-6.6.4-1-x86_64.pkg.tar.zst"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = true
+bind_config = "nemo"
+binds = [
+    "~/.local/share",
+    "/media",
+    "/mnt"
+]
+
+[install]
+binaries = [
+    { source = "usr/bin/nemo", target = "nemo" }
+]
+desktop_entry = { name = "Nemo", exec = "nemo %U", icon = "nemo", categories = "System;FileTools;FileManager;", comment = "Access and organize files" }

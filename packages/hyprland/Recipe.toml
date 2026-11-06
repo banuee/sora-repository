@@ -1,0 +1,29 @@
+[package]
+name = "hyprland"
+version = "0.57.1"
+description = "Dynamic tiling Wayland compositor"
+homepage = "https://hyprland.org"
+type = "binary"
+
+[source]
+url = "https://geo.mirror.pkgbuild.com/extra/os/x86_64/hyprland-0.57.1-1-x86_64.pkg.tar.zst"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = true
+bind_config = "hypr"
+binds = [
+    "/dev",
+    "/run",
+    "/sys",
+    "/tmp"
+]
+
+[install]
+binaries = [
+    { source = "usr/bin/Hyprland", target = "Hyprland" },
+    { source = "usr/bin/hyprctl", target = "hyprctl" },
+    { source = "usr/bin/hyprland", target = "hyprland" }
+]
+desktop_entry = { name = "Hyprland", exec = "Hyprland", icon = "hyprland", categories = "System;", comment = "An intelligent dynamic tiling Wayland compositor" }
