@@ -1,0 +1,25 @@
+[package]
+name = "telegram"
+version = "7.4.0"
+description = "Telegram Desktop messaging application"
+homepage = "https://desktop.telegram.org"
+type = "binary"
+
+[source]
+url = "https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.0/td-setup-linux-x64-7.4.0.tar.xz"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = true
+bind_config = "TelegramDesktop"
+binds = [
+    "~/.local/share/TelegramDesktop",
+    "~/Downloads"
+]
+
+[install]
+binaries = [
+    { source = "Telegram/Telegram", target = "telegram" }
+]
+desktop_entry = { name = "Telegram Desktop", exec = "telegram -- %u", icon = "telegram", categories = "Network;Chat;InstantMessaging;", comment = "Official Telegram Desktop client" }

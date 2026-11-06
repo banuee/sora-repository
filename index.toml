@@ -1,0 +1,11 @@
+[packages.fastfetch]
+version = "2.38.0"
+description = "Fast system information display tool"
+
+[packages.btop]
+version = "1.4.0"
+description = "Resource monitor for processor, memory, disks and network"
+
+[packages.telegram]
+version = "7.4.0"
+description = "Telegram Desktop messaging application"

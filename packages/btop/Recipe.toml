@@ -1,0 +1,20 @@
+[package]
+name = "btop"
+version = "1.4.0"
+description = "Resource monitor that shows usage and stats for processor, memory, disks, network and processes"
+homepage = "https://github.com/aristocratos/btop"
+type = "binary"
+
+[source]
+url = "https://github.com/aristocratos/btop/releases/download/v1.4.0/btop-x86_64-linux-musl.tbz"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = false
+bind_config = "btop"
+
+[install]
+binaries = [
+    { source = "btop/bin/btop", target = "btop" }
+]

@@ -1,0 +1,20 @@
+[package]
+name = "fastfetch"
+version = "2.38.0"
+description = "Fast system information display tool"
+homepage = "https://github.com/fastfetch-cli/fastfetch"
+type = "binary"
+
+[source]
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.38.0/fastfetch-linux-amd64.tar.gz"
+
+[sandbox]
+share_network = false
+share_ipc = false
+bind_home = false
+bind_config = "fastfetch"
+
+[install]
+binaries = [
+    { source = "fastfetch-linux-amd64/usr/bin/fastfetch", target = "fastfetch" }
+]
