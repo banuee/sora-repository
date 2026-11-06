@@ -1,0 +1,28 @@
+[package]
+name = "sddm"
+version = "0.21.0"
+description = "QML based X11 and Wayland display manager"
+homepage = "https://github.com/sddm/sddm"
+type = "binary"
+
+[source]
+url = "https://geo.mirror.pkgbuild.com/extra/os/x86_64/sddm-0.21.0-7-x86_64.pkg.tar.zst"
+
+[sandbox]
+share_network = true
+share_ipc = true
+bind_home = true
+bind_config = "sddm"
+binds = [
+    "/dev",
+    "/run",
+    "/sys",
+    "/tmp",
+    "/var/lib/sddm"
+]
+
+[install]
+binaries = [
+    { source = "usr/bin/sddm", target = "sddm" },
+    { source = "usr/bin/sddm-greeter-qt6", target = "sddm-greeter" }
+]

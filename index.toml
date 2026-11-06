@@ -29,3 +29,7 @@ description = "Dynamic tiling Wayland compositor"
 [packages.networkmanager]
 version = "1.58.1"
 description = "Network connection manager and user applications (nmcli, nmtui)"
+
+[packages.sddm]
+version = "0.21.0"
+description = "QML based X11 and Wayland display manager"
